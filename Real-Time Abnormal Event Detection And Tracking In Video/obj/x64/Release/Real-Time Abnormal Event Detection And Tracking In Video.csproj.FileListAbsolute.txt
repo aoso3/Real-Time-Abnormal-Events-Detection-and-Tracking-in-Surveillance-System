@@ -1,0 +1,6 @@
+D:\2\Real-Time Abnormal Event Detection And Tracking In Video\Real-Time Abnormal Event Detection And Tracking In Video\obj\x64\Release\Interop.WMPLib.dll
+D:\2\Real-Time Abnormal Event Detection And Tracking In Video\Real-Time Abnormal Event Detection And Tracking In Video\obj\x64\Release\Real-Time Abnormal Event Detection And Tracking In Video.csproj.ResolveComReference.cache
+D:\2\Real-Time Abnormal Event Detection And Tracking In Video\Real-Time Abnormal Event Detection And Tracking In Video\obj\x64\Release\Real_Time_Abnormal_Event_Detection_And_Tracking_In_Video.ICU.resources
+D:\2\Real-Time Abnormal Event Detection And Tracking In Video\Real-Time Abnormal Event Detection And Tracking In Video\obj\x64\Release\Real_Time_Abnormal_Event_Detection_And_Tracking_In_Video.Main.resources
+D:\2\Real-Time Abnormal Event Detection And Tracking In Video\Real-Time Abnormal Event Detection And Tracking In Video\obj\x64\Release\Real_Time_Abnormal_Event_Detection_And_Tracking_In_Video.Properties.Resources.resources
+D:\2\Real-Time Abnormal Event Detection And Tracking In Video\Real-Time Abnormal Event Detection And Tracking In Video\obj\x64\Release\Real-Time Abnormal Event Detection And Tracking In Video.csproj.GenerateResource.Cache

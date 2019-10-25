@@ -1,0 +1,128 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="Real_Time_Abnormal_Event_Detection_And_Tracking_In_Video.AbnormalDetection" Collapsed="true">
+    <Position X="3.25" Y="1.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>QAAEAAAAAAAAIAEAAAAAAQACQgAgACAAEACAAAAIMDA=</HashCode>
+      <FileName>AbnormalDetection.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Real_Time_Abnormal_Event_Detection_And_Tracking_In_Video.Classifiers" Collapsed="true">
+    <Position X="7.5" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAgAEgAAAAAAAgABAAAAAwAAAAAAg=</HashCode>
+      <FileName>Classifiers.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Real_Time_Abnormal_Event_Detection_And_Tracking_In_Video.Clustering" Collapsed="true">
+    <Position X="0.5" Y="4.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>QAAAAAAAAAAAAAEAAAAAAAAAAAAgAAAAAACAAAIAACA=</HashCode>
+      <FileName>Clustering.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Real_Time_Abnormal_Event_Detection_And_Tracking_In_Video.FowlkesMallowsIndex" Collapsed="true">
+    <Position X="0.5" Y="5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAEAAAAAAAAAAIAAAAgAAAAAAAAAAABAABAIAAAA=</HashCode>
+      <FileName>FowlkesMallowsIndex.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Real_Time_Abnormal_Event_Detection_And_Tracking_In_Video.ICU" Collapsed="true">
+    <Position X="7.5" Y="6.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>2AAl6jsEwCRACegHJCChaMACAZm4AGJhykgwwAFABL0=</HashCode>
+      <FileName>ICU.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Real_Time_Abnormal_Event_Detection_And_Tracking_In_Video.Media" Collapsed="true">
+    <Position X="7.5" Y="4.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAACAAAAAAAAAIAAAAAAAAAAAAAAAAAAAAAAAQAAA=</HashCode>
+      <FileName>Media.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Real_Time_Abnormal_Event_Detection_And_Tracking_In_Video.MegaBlocks" Collapsed="true">
+    <Position X="0.5" Y="3.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAACAABAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>MegaBlocks.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Real_Time_Abnormal_Event_Detection_And_Tracking_In_Video.MotionInfluenceMap" Collapsed="true">
+    <Position X="1.75" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>QIAAFCCAAAAAAgAAAgBAAAggAACgAAhAJACEAQAAASA=</HashCode>
+      <FileName>MotionInfluenceMap.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Real_Time_Abnormal_Event_Detection_And_Tracking_In_Video.OptFlowOfBlocks" Collapsed="true">
+    <Position X="0.5" Y="3" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAgAAAAAAAA=</HashCode>
+      <FileName>OptFlowOfBlocks.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Real_Time_Abnormal_Event_Detection_And_Tracking_In_Video.Player" Collapsed="true">
+    <Position X="7.75" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAACBACEEgAAiAQAACAgCAAAIAgAAAgABAAAw=</HashCode>
+      <FileName>Player.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Real_Time_Abnormal_Event_Detection_And_Tracking_In_Video.PreProcessing" Collapsed="true">
+    <Position X="7.5" Y="3" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>PreProcessing.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Real_Time_Abnormal_Event_Detection_And_Tracking_In_Video.Program" Collapsed="true">
+    <Position X="7.5" Y="5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABAAAAAA=</HashCode>
+      <FileName>Program.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Real_Time_Abnormal_Event_Detection_And_Tracking_In_Video.Serialize" Collapsed="true">
+    <Position X="7.5" Y="2.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAEAAAAAAAAAAAAACAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Serialize.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="real_time_abnormal_event_detection_and_tracking_in_video.FeaturesExtraction" Collapsed="true">
+    <Position X="7.5" Y="5.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAFCAAAAAAAQkAAkAACAAAAAAAAAAAAAAAAUAAAAA=</HashCode>
+      <FileName>FeaturesExtraction.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Real_Time_Abnormal_Event_Detection_And_Tracking_In_Video.Properties.Resources" Collapsed="true">
+    <Position X="2.75" Y="6.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAABgAFAgUIAACgAAIBE0IACUAQIFEIIMFEgSYAIJk=</HashCode>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Real_Time_Abnormal_Event_Detection_And_Tracking_In_Video.Properties.Settings" Collapsed="true">
+    <Position X="4.5" Y="6.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAIAAAAAABAAAAAAAAAAAAAAA=</HashCode>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="VideoSurveilance.Camera" Collapsed="true">
+    <Position X="7.5" Y="1.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AaAAAAAgEIgEAAJQCBABgBCDQAABRAEAECAEgEgF4KQ=</HashCode>
+      <FileName>Tracking\Camera.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="VideoSurveilance.DrawMatches" Collapsed="true">
+    <Position X="7.5" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAgAAAAAAIAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Tracking\DrawMatches.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>

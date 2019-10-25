@@ -1,0 +1,43 @@
+D:\2\Real-Time Abnormal Event Detection And Tracking In Video\Real-Time Abnormal Event Detection And Tracking In Video\obj\x64\Debug\Real_Time_Abnormal_Event_Detection_And_Tracking_In_Video.Properties.Resources.resources
+D:\2\Real-Time Abnormal Event Detection And Tracking In Video\Real-Time Abnormal Event Detection And Tracking In Video\obj\x64\Debug\Real-Time Abnormal Event Detection And Tracking In Video.csproj.GenerateResource.Cache
+D:\2\Real-Time Abnormal Event Detection And Tracking In Video\Real-Time Abnormal Event Detection And Tracking In Video\bin\x64\Debug\Real-Time Abnormal Event Detection And Tracking In Video.pdb
+D:\2\Real-Time Abnormal Event Detection And Tracking In Video\Real-Time Abnormal Event Detection And Tracking In Video\obj\x64\Debug\Real-Time Abnormal Event Detection And Tracking In Video.pdb
+D:\2\Real-Time Abnormal Event Detection And Tracking In Video\Real-Time Abnormal Event Detection And Tracking In Video\bin\x64\Debug\Emgu.CV.DebuggerVisualizers.VS2013.dll
+D:\2\Real-Time Abnormal Event Detection And Tracking In Video\Real-Time Abnormal Event Detection And Tracking In Video\bin\x64\Debug\Emgu.CV.UI.dll
+D:\2\Real-Time Abnormal Event Detection And Tracking In Video\Real-Time Abnormal Event Detection And Tracking In Video\bin\x64\Debug\Emgu.CV.World.dll
+D:\2\Real-Time Abnormal Event Detection And Tracking In Video\Real-Time Abnormal Event Detection And Tracking In Video\bin\x64\Debug\ZedGraph.dll
+D:\2\Real-Time Abnormal Event Detection And Tracking In Video\Real-Time Abnormal Event Detection And Tracking In Video\bin\x64\Debug\Emgu.CV.UI.pdb
+D:\2\Real-Time Abnormal Event Detection And Tracking In Video\Real-Time Abnormal Event Detection And Tracking In Video\bin\x64\Debug\Emgu.CV.UI.xml
+D:\2\Real-Time Abnormal Event Detection And Tracking In Video\Real-Time Abnormal Event Detection And Tracking In Video\bin\x64\Debug\Emgu.CV.World.pdb
+D:\2\Real-Time Abnormal Event Detection And Tracking In Video\Real-Time Abnormal Event Detection And Tracking In Video\bin\x64\Debug\Emgu.CV.World.xml
+D:\2\Real-Time Abnormal Event Detection And Tracking In Video\Real-Time Abnormal Event Detection And Tracking In Video\bin\x64\Debug\ZedGraph.xml
+D:\2\Real-Time Abnormal Event Detection And Tracking In Video\Real-Time Abnormal Event Detection And Tracking In Video\bin\x64\Debug\zh-CN\Emgu.CV.UI.resources.dll
+D:\2\Real-Time Abnormal Event Detection And Tracking In Video\Real-Time Abnormal Event Detection And Tracking In Video\bin\x64\Debug\zh-CN\ZedGraph.resources.dll
+D:\2\Real-Time Abnormal Event Detection And Tracking In Video\Real-Time Abnormal Event Detection And Tracking In Video\bin\x64\Debug\EMGU\concrt140.dll
+D:\2\Real-Time Abnormal Event Detection And Tracking In Video\Real-Time Abnormal Event Detection And Tracking In Video\bin\x64\Debug\EMGU\cvextern.dll
+D:\2\Real-Time Abnormal Event Detection And Tracking In Video\Real-Time Abnormal Event Detection And Tracking In Video\bin\x64\Debug\EMGU\msvcp140.dll
+D:\2\Real-Time Abnormal Event Detection And Tracking In Video\Real-Time Abnormal Event Detection And Tracking In Video\bin\x64\Debug\EMGU\opencv_ffmpeg330_64.dll
+D:\2\Real-Time Abnormal Event Detection And Tracking In Video\Real-Time Abnormal Event Detection And Tracking In Video\bin\x64\Debug\EMGU\vcruntime140.dll
+D:\2\Real-Time Abnormal Event Detection And Tracking In Video\Real-Time Abnormal Event Detection And Tracking In Video\bin\x64\Debug\EMGU\cvextern.lib
+D:\2\Real-Time Abnormal Event Detection And Tracking In Video\Real-Time Abnormal Event Detection And Tracking In Video\bin\x64\Debug\Accord.dll.config
+D:\2\Real-Time Abnormal Event Detection And Tracking In Video\Real-Time Abnormal Event Detection And Tracking In Video\bin\x64\Debug\Accord.dll
+D:\2\Real-Time Abnormal Event Detection And Tracking In Video\Real-Time Abnormal Event Detection And Tracking In Video\bin\x64\Debug\Accord.MachineLearning.dll
+D:\2\Real-Time Abnormal Event Detection And Tracking In Video\Real-Time Abnormal Event Detection And Tracking In Video\bin\x64\Debug\Accord.Math.Core.dll
+D:\2\Real-Time Abnormal Event Detection And Tracking In Video\Real-Time Abnormal Event Detection And Tracking In Video\bin\x64\Debug\Accord.Math.dll
+D:\2\Real-Time Abnormal Event Detection And Tracking In Video\Real-Time Abnormal Event Detection And Tracking In Video\bin\x64\Debug\Accord.Statistics.dll
+D:\2\Real-Time Abnormal Event Detection And Tracking In Video\Real-Time Abnormal Event Detection And Tracking In Video\bin\x64\Debug\Accord.MachineLearning.xml
+D:\2\Real-Time Abnormal Event Detection And Tracking In Video\Real-Time Abnormal Event Detection And Tracking In Video\bin\x64\Debug\Accord.Math.xml
+D:\2\Real-Time Abnormal Event Detection And Tracking In Video\Real-Time Abnormal Event Detection And Tracking In Video\bin\x64\Debug\Accord.Math.Core.xml
+D:\2\Real-Time Abnormal Event Detection And Tracking In Video\Real-Time Abnormal Event Detection And Tracking In Video\bin\x64\Debug\Accord.Statistics.xml
+D:\2\Real-Time Abnormal Event Detection And Tracking In Video\Real-Time Abnormal Event Detection And Tracking In Video\bin\x64\Debug\Newtonsoft.Json.dll
+D:\2\Real-Time Abnormal Event Detection And Tracking In Video\Real-Time Abnormal Event Detection And Tracking In Video\bin\x64\Debug\Newtonsoft.Json.xml
+D:\2\Real-Time Abnormal Event Detection And Tracking In Video\Real-Time Abnormal Event Detection And Tracking In Video\obj\x64\Debug\Real_Time_Abnormal_Event_Detection_And_Tracking_In_Video.ICU.resources
+D:\2\Real-Time Abnormal Event Detection And Tracking In Video\Real-Time Abnormal Event Detection And Tracking In Video\bin\x64\Debug\Real-Time Abnormal Event Detection And Tracking In Video.exe.config
+D:\2\Real-Time Abnormal Event Detection And Tracking In Video\Real-Time Abnormal Event Detection And Tracking In Video\bin\x64\Debug\Real-Time Abnormal Event Detection And Tracking In Video.exe
+D:\2\Real-Time Abnormal Event Detection And Tracking In Video\Real-Time Abnormal Event Detection And Tracking In Video\obj\x64\Debug\Real-Time Abnormal Event Detection And Tracking In Video.exe
+D:\2\Real-Time Abnormal Event Detection And Tracking In Video\Real-Time Abnormal Event Detection And Tracking In Video\bin\x64\Debug\Accord.IO.dll
+D:\2\Real-Time Abnormal Event Detection And Tracking In Video\Real-Time Abnormal Event Detection And Tracking In Video\obj\x64\Debug\Real-Time Abnormal Event Detection And Tracking In Video.csprojResolveAssemblyReference.cache
+D:\2\Real-Time Abnormal Event Detection And Tracking In Video\Real-Time Abnormal Event Detection And Tracking In Video\obj\x64\Debug\Interop.WMPLib.dll
+D:\2\Real-Time Abnormal Event Detection And Tracking In Video\Real-Time Abnormal Event Detection And Tracking In Video\obj\x64\Debug\Real-Time Abnormal Event Detection And Tracking In Video.csproj.ResolveComReference.cache
+D:\2\Real-Time Abnormal Event Detection And Tracking In Video\Real-Time Abnormal Event Detection And Tracking In Video\bin\x64\Debug\MediaToolkit.dll
+D:\2\Real-Time Abnormal Event Detection And Tracking In Video\Real-Time Abnormal Event Detection And Tracking In Video\obj\x64\Debug\Real_Time_Abnormal_Event_Detection_And_Tracking_In_Video.Player.resources
