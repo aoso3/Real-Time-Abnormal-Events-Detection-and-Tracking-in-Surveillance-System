@@ -14,7 +14,7 @@ Newtonsoft.Json <br>
 <br>
 <br>
 
-Following Class diagram the system:
+Following Class diagram of the system:
 ![Alt tag](Screenshots/2.png?raw=true "Class")
 
 
