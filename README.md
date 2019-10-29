@@ -37,9 +37,7 @@ the optical flows for every pixel within a frame, we
 partition the frame into M by N uniform blocks without
 a loss of generality, where the blocks can be indexed by
 {B1, B2, ... , BMN}, and then compute a representative optical
-flow for each block by taking the average of the optical
-flows of the pixels within the block:
-![Alt tag](Screenshots/md1.PNG?raw=true "MD")
+flow for each block by taking the average of the optical flows of the pixels within the block.
 <br>
 
 2- Motion Influence Map:
