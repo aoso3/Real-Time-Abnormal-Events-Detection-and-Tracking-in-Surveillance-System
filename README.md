@@ -58,7 +58,7 @@ D- Calculate the beam weights of impact for each block.<br>
 After we have built motion influence map of the scene, we can find the mass that contains a suspicious event where it has a characteristic motion beam. But the activity is tracked through several consecutive scenes so we will extract the beam of attributes for each of the adjacent blocks through a certain number of scenes together mega block.
 Thus each scene will be divided into a group of mega blocks each containing the motion effect
 Finally we extract the temporal and spatial features of each mega block for a number of blocks within the scene
-By collecting the rays of the movement effect within each scene separately.
+By collecting the rays of the movement effect within each scene separately.<br>
 ![Alt tag](Screenshots/mega.png?raw=true "Mega")
 
 <br>
