@@ -13,7 +13,7 @@ MediaToolkit <br>
 Newtonsoft.Json <br>
 
 Following Class diagram and Activity diagram of the system.
-![Alt text](Screenshots/2.png?raw=true "Class")
+<center> ![Alt text](Screenshots/2.png?raw=true "Class") </center>
 ![Alt text](Screenshots/1.png?raw=true "Activity")
 
 
