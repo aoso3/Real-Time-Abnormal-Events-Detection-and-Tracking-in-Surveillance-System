@@ -1,0 +1,44 @@
+[1] Grubbs 1969 - Detecting outlying observations in samples
+[2] The Inefficacy of Chauvenet's Criterion for Elimination of Data Points. Braden J. Limb,    Dalon G. Work, Joshua Hodson and Barton L. Smith
+[3] [Bobick 2001] Aaron F. Bobick and JamesW. Davis. The recognition of human movement
+using temporal templates. IEEE Transactions on Pattern Analysis and Machine
+Intelligence, vol. 23, no. 3, pages 257–267, 2001.
+[4] [Piciarelli 2008b] Claudio Piciarelli, Christian Micheloni and Gian Luca Foresti.
+Trajectory-based anomalous event detection. IEEE Transactions on Circuits and Systems for Video Technology, vol. 18, no. 11, pages 1544–1554, 2008. 
+
+[5] [Vassilakis 2002] Helen Vassilakis, A Jonathan Howell and Hilary Buxton. Comparison
+of feedforward (tdrbf) and generative (tdrgbn) network for gesture based control. In Gesture and Sign Language in Human-Computer Interaction, pages 317–321. Springer, 2002.
+
+[6] [Utasi 2010] Ákos Utasi and László Czúni. Detection of unusual optical flow patterns
+by multilevel hidden Markov models. Optical Engineering, vol. 49, no. 1, pages 017201–017201, 2010. 
+
+[7] [Jiménez-Hernández 2010] Hugo Jiménez-Hernández, Jose-Joel González-Barbosa and
+Teresa Garcia-Ramírez. Detecting abnormal vehicular dynamics at intersections
+based on an unsupervised learning approach and a stochastic model. Sensors, vol. 10, no. 8, pages 7576–7601, 2010. 
+
+[8] [Joo 2006] Seong-Wook Joo and Rama Chellappa. Attribute grammar-based event recognition
+and anomaly detection. In Proceedings of IEEE Conference on Computer
+Vision and Pattern Recognition Workshop (CVPRW), pages 107–107. IEEE, 2006.
+
+ [9] [Fusier 2007] Florent Fusier, Valéry Valentin, François Brémond, Monique Thonnat, Mark
+Borg, David Thirde and James Ferryman. Video understanding for complex activity
+recognition. Machine Vision and Applications, vol. 18, no. 3-4, pages 167–188, 2007. 
+
+[10] [Shet 2005] Vinay D Shet, David Harwood and Larry S Davis. Vidmap: video monitoring
+of activity with prolog. In IEEE Conference on Advanced Video and Signal Based
+Surveillance (AVSS), pages 224–229, 2005. 
+[11] [Horn 1981] Berthold KP Horn and Brian G Schunck. Determining optical flow. Artificial
+intelligence, vol. 17, no. 1, pages 185–203, 1981. 
+[12] S. Wang and Z. Miao, “Anomaly Detection in Crowd Scene,” Proc. 10th
+IEEE International Conference on Signal Processing, Beijing, China, Oct.
+24-28, 2010, pp. 1220-1223.
+[13] D. Y. Chen and P. C. Huang, “Motion-Based Unusual Event Detection
+in Human Crowds,” Journal of Vision and Communication and Image
+Representation, Vol. 22, No. 2, 2011, pp. 178-186.
+[14] Motion Influence Map for Unusual Human Activity Detection and Localization in Crowded Scenes, Dong-Gyu Lee, Student Member, IEEE, Heung-Il Suk, Member, IEEE, Sung-Kee Park, Member, IEEE,and Seong-Whan Lee, Fellow, IEEE
+[15] D. Helbing and P. Molnar, “Social Force Model for Pedestrian Dynamics,”
+Physical Review E, Vol. 51, No. 5, 1995, pp. 4282-4286.
+[16] João F. Henriques, Rui Caseiro, Pedro Martins, and Jorge Batista, “High-Speed Tracking with Kernelized Correlation Filters”, IEEE Transactions on Pattern Analysis and Machine Intelligence , 2014.
+[17] Y. Wu, J. Lim, and M. H. Yang, “Online object tracking: A benchmark,” in CVPR, 2013.
+[18] B. Babenko, M. Yang, and S. Belongie, “Robust object tracking with online multiple instance learning,” TPAMI, 2011
+[19] J. F. Henriques, R. Caseiro, P. Martins, and J. Batista, “Exploiting the circulant structure of tracking-by-detection with kernels,” in ECC V, 2012.
