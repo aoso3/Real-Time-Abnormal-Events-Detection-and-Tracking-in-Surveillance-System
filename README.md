@@ -22,7 +22,7 @@ Following Class diagram and Activity diagram of the system.
   <h4>Introduction</h4> 
 Initially, Suspicious movement is divided into two parts, internal and external. The internal occurs in a small area of the scene such as a sudden appearance of an object (such as a bicycle or car) in an area where people are naturally present, or the rapid movement of a person while the rest of the people move slowly. On the whole, the external situation occurs as many people suddenly flee together.
 
-![Alt text](Screenshots/mim1.png?raw=true "MIM1")
+![Alt tag](Screenshots/mim1.png?raw=true "MIM1")
 
 The diagram illustrates the general framework of the proposed system. By entering a series of scenes, motion information is calculated at the pixel and mass level sequentially. The kinetic energy of each block is then calculated to construct the structure of the motion effect (Motion Influence Map).
 The proposed structure represents both temporal and spatial properties within the attribute array.
@@ -38,7 +38,7 @@ a loss of generality, where the blocks can be indexed by
 {B1, B2, ... , BMN}, and then compute a representative optical
 flow for each block by taking the average of the optical
 flows of the pixels within the block:
-![Alt text](Screenshots/md1.PNG?raw=true "MD")
+![Alt tag](Screenshots/md1.PNG?raw=true "MD")
 <br>
 
 2- Motion Influence Map:
@@ -46,7 +46,7 @@ The direction of pedestrian movement within the crowd can be affected by several
 We consider that the mass is under the influence of another moving object that will be determined by two factors: the direction of movement and the speed of movement. The faster the object moves, the greater the number of adjacent blocks affected by its movement. Nearby blocks are more affected than remote blocks.
 After calculating the effect weights for all the blocks we can build Motion Influence Map express patterns of motion effect within the scene.
 After calculating the impact weights that are only calculated between two blocks we will calculate the beam of motion weights for each block within the scene where we will take all the impact blocks into account.
-![Alt text](Screenshots/mim2.png?raw=true "MIM2")
+![Alt tag](Screenshots/mim2.png?raw=true "MIM2")
 <br>
 The previous diagram briefly illustrates the stages of Motion Influence Map algorithm 
 A- Optical flow
@@ -60,7 +60,7 @@ After we have built motion influence map of the scene, we can find the mass that
 Thus each scene will be divided into a group of mega blocks each containing the motion effect
 Finally we extract the temporal and spatial features of each mega block for a number of blocks within the scene
 By collecting the rays of the movement effect within each scene separately.
-![Alt text](Screenshots/mega.png?raw=true "Mega")
+![Alt tag](Screenshots/mega.png?raw=true "Mega")
 
 <br>
 
@@ -75,11 +75,11 @@ of usual activities that can occur in the respective area.
   <h4>Steps</h4>
 1- Corner Detector: Apply "Good Features to track" algorithm
 
-![Alt text](Screenshots/cor.png?raw=true "corners")
+![Alt tag](Screenshots/cor.png?raw=true "corners")
 <br>
 2- Lucas-Kanade Optical Flow: On the extracted corners.
 
-![Alt text](Screenshots/op.png?raw=true "optical flow")
+![Alt tag](Screenshots/op.png?raw=true "optical flow")
 <br>
 3- Classification
 
