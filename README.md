@@ -47,11 +47,11 @@ After calculating the effect weights for all the blocks we can build Motion Infl
 After calculating the impact weights that are only calculated between two blocks we will calculate the beam of motion weights for each block within the scene where we will take all the impact blocks into account.
 ![Alt tag](Screenshots/mim2.png?raw=true "MIM2")
 <br>
-The previous diagram briefly illustrates the stages of Motion Influence Map algorithm 
-A- Optical flow
-B- calculate the impact of movement between the blocks.
-C- Calculate the effect weights between each two blocks.
-D- Calculate the beam weights of impact for each block.
+The previous diagram briefly illustrates the stages of Motion Influence Map algorithm :<br>
+A- Optical flow.<br>
+B- calculate the impact of movement between the blocks.<br>
+C- Calculate the effect weights between each two blocks.<br>
+D- Calculate the beam weights of impact for each block.<br>
 <br>
 
 3- Feature Extraction:
