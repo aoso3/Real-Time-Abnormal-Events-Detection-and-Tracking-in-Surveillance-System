@@ -46,7 +46,7 @@ The direction of pedestrian movement within the crowd can be affected by several
 We consider that the mass is under the influence of another moving object that will be determined by two factors: the direction of movement and the speed of movement. The faster the object moves, the greater the number of adjacent blocks affected by its movement. Nearby blocks are more affected than remote blocks.
 After calculating the effect weights for all the blocks we can build Motion Influence Map express patterns of motion effect within the scene.
 After calculating the impact weights that are only calculated between two blocks we will calculate the beam of motion weights for each block within the scene where we will take all the impact blocks into account.
-![Alt text](Screenshots/mim2.PNG?raw=true "MIM2")
+![Alt text](Screenshots/mim2.png?raw=true "MIM2")
 <br>
 The previous diagram briefly illustrates the stages of Motion Influence Map algorithm 
 A- Optical flow
@@ -73,13 +73,15 @@ of usual activities that can occur in the respective area.
 
 <h3> 2- Pattern Recognition and State Event Model </h3>
   <h4>Steps</h4>
-  1- Corner Detector: Apply "Good Features to track" algorithm
-  ![Alt text](Screenshots/cor.png?raw=true "corners")
-  <br>
-  2- Lucas-Kanade Optical Flow: On the extracted corners.
-    ![Alt text](Screenshots/op.png?raw=true "optical flow")
-  <br>
-  3- Classification
+1- Corner Detector: Apply "Good Features to track" algorithm
+
+![Alt text](Screenshots/cor.png?raw=true "corners")
+<br>
+2- Lucas-Kanade Optical Flow: On the extracted corners.
+
+![Alt text](Screenshots/op.png?raw=true "optical flow")
+<br>
+3- Classification
 
   
 
