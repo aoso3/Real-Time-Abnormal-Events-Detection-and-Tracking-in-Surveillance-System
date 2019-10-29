@@ -11,8 +11,11 @@ Accord.MachineLearning <br>
 Accord.Math <br>
 MediaToolkit <br>
 Newtonsoft.Json <br>
+<br>
+<br>
+<br>
 
-Following Class diagram and Activity diagram of the system.
+<h5>Following Class diagram and Activity diagram of the system.</h5>
 ![Alt tag](Screenshots/2.png?raw=true "Class")
 ![Alt tag](Screenshots/1.png?raw=true "Activity")
 
