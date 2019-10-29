@@ -14,9 +14,8 @@ Newtonsoft.Json <br>
 <br>
 <br>
 
-Following Class diagram and Activity diagram of the system.
+Following Class diagram the system:
 ![Alt tag](Screenshots/2.png?raw=true "Class")
-![Alt tag](Screenshots/1.png?raw=true "Activity")
 
 
 <h1>System Implementation</h1>
