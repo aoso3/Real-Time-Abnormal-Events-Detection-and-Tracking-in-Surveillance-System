@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 2013
-VisualStudioVersion = 12.0.40629.0
+VisualStudioVersion = 12.0.30723.0
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Real-Time Abnormal Event Detection And Tracking In Video", "Real-Time Abnormal Event Detection And Tracking In Video\Real-Time Abnormal Event Detection And Tracking In Video.csproj", "{175D1F4A-26B2-472C-9084-C5D5A852E5C6}"
 EndProject

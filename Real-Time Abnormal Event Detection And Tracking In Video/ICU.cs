@@ -16,8 +16,7 @@ using Emgu.CV.Structure;
 using Emgu.Util;
 using Emgu.CV.Cvb;
 using Emgu.CV.UI;
-using Emgu.CV.VideoSurveillance;
-using Emgu.CV.Tracking;
+//using Emgu.CV.Tracking;
 using Emgu.CV.Features2D;
 using Emgu.CV.Util;
 using Emgu.CV.Cuda;
@@ -65,7 +64,7 @@ namespace Real_Time_Abnormal_Event_Detection_And_Tracking_In_Video
         bool alarm = false, violence = true,cover_camera = true,chocking=true,lying =true, running = true,motion=false;
         WMPLib.WindowsMediaPlayer wplayer;
         bool player1 = false, player2 = false;
-        
+        String path = "H:\\Github Projects\\Real-Time-Abnormal-Event-Detection-And-Tracking-In-Video";
 
         public ICU()
         {
@@ -73,12 +72,12 @@ namespace Real_Time_Abnormal_Event_Detection_And_Tracking_In_Video
             current_frame_num1 = 0;
             current_frame_num2 = 0;
             F_E = new FeaturesExtraction();
-            knn = Serializer.Load<KNearestNeighbors>(Path.Combine("D:\\2\\Real-Time Abnormal Event Detection And Tracking In Video", "knn7.bin"));
-            RF = Serializer.Load<RandomForest>(Path.Combine("D:\\2\\Real-Time Abnormal Event Detection And Tracking In Video", "RF7.bin"));
-            LR = Serializer.Load<LogisticRegression>(Path.Combine("D:\\2\\Real-Time Abnormal Event Detection And Tracking In Video", "LR7.bin"));
-            SVM = Serializer.Load<SupportVectorMachine<Gaussian>>(Path.Combine("D:\\2\\Real-Time Abnormal Event Detection And Tracking In Video", "SVM7.bin"));
-            NB = Serializer.Load<NaiveBayes>(Path.Combine("D:\\2\\Real-Time Abnormal Event Detection And Tracking In Video", "NB7.bin"));
-            HMM = Serializer.Load<HiddenMarkovModel>(Path.Combine("D:\\2\\Real-Time Abnormal Event Detection And Tracking In Video", "HMM_seq7.bin"));
+            knn = Serializer.Load<KNearestNeighbors>(Path.Combine(path, "knn7.bin"));
+            RF = Serializer.Load<RandomForest>(Path.Combine(path, "RF7.bin"));
+            LR = Serializer.Load<LogisticRegression>(Path.Combine(path, "LR7.bin"));
+            SVM = Serializer.Load<SupportVectorMachine<Gaussian>>(Path.Combine(path, "SVM7.bin"));
+            NB = Serializer.Load<NaiveBayes>(Path.Combine(path, "NB7.bin"));
+            HMM = Serializer.Load<HiddenMarkovModel>(Path.Combine(path, "HMM_seq7.bin"));
 
             //List<int> aa = new List<int>();
             //aa.Add(1);

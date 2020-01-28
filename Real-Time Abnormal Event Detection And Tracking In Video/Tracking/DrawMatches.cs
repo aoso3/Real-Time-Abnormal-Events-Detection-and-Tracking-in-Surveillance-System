@@ -72,9 +72,9 @@ namespace VideoSurveilance
                             
                             for (int i = 0; i < matches.Size; i++)
                             {
-                                if (mask.GetData(i)[0] == 0) continue;
-                                foreach (var e in matches[i].ToArray())
-                                    ++score;
+                                //if (mask.GetData(i)[0] == 0) continue;
+                                //foreach (var e in matches[i].ToArray())
+                                //    ++score;
                             }
                             // <----------------------------------------------
                         }
