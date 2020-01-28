@@ -14,11 +14,11 @@ Newtonsoft.Json <br>
 <br>
 <br>
 
-Following Class diagram the system:
+<h1>System Implementation</h1>
+
+Following Class diagram of the system:
 ![Alt tag](Screenshots/2.png?raw=true "Class")
 
-
-<h1>System Implementation</h1>
   <h3>1- Motion Influence Map </h3>
   <h4>Introduction</h4> 
 Initially, Suspicious movement is divided into two parts, internal and external. The internal occurs in a small area of the scene such as a sudden appearance of an object (such as a bicycle or car) in an area where people are naturally present, or the rapid movement of a person while the rest of the people move slowly. On the whole, the external situation occurs as many people suddenly flee together.
@@ -37,9 +37,7 @@ the optical flows for every pixel within a frame, we
 partition the frame into M by N uniform blocks without
 a loss of generality, where the blocks can be indexed by
 {B1, B2, ... , BMN}, and then compute a representative optical
-flow for each block by taking the average of the optical
-flows of the pixels within the block:
-![Alt tag](Screenshots/md1.PNG?raw=true "MD")
+flow for each block by taking the average of the optical flows of the pixels within the block.
 <br>
 
 2- Motion Influence Map:
@@ -49,18 +47,18 @@ After calculating the effect weights for all the blocks we can build Motion Infl
 After calculating the impact weights that are only calculated between two blocks we will calculate the beam of motion weights for each block within the scene where we will take all the impact blocks into account.
 ![Alt tag](Screenshots/mim2.png?raw=true "MIM2")
 <br>
-The previous diagram briefly illustrates the stages of Motion Influence Map algorithm 
-A- Optical flow
-B- calculate the impact of movement between the blocks.
-C- Calculate the effect weights between each two blocks.
-D- Calculate the beam weights of impact for each block.
+The previous diagram briefly illustrates the stages of Motion Influence Map algorithm :<br>
+A- Optical flow.<br>
+B- calculate the impact of movement between the blocks.<br>
+C- Calculate the effect weights between each two blocks.<br>
+D- Calculate the beam weights of impact for each block.<br>
 <br>
 
 3- Feature Extraction:
 After we have built motion influence map of the scene, we can find the mass that contains a suspicious event where it has a characteristic motion beam. But the activity is tracked through several consecutive scenes so we will extract the beam of attributes for each of the adjacent blocks through a certain number of scenes together mega block.
 Thus each scene will be divided into a group of mega blocks each containing the motion effect
 Finally we extract the temporal and spatial features of each mega block for a number of blocks within the scene
-By collecting the rays of the movement effect within each scene separately.
+By collecting the rays of the movement effect within each scene separately.<br>
 ![Alt tag](Screenshots/mega.png?raw=true "Mega")
 
 <br>
