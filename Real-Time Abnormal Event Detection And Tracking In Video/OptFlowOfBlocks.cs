@@ -12,8 +12,30 @@ using System.Runtime.InteropServices;
 
 namespace Real_Time_Abnormal_Event_Detection_And_Tracking_In_Video
 {
+    /// <summary>
+    /// Calculate optical flow of the processed frames.
+    /// </summary>
     class OptFlowOfBlocks
     {
+
+        /// <summary>
+        /// Calculating Optical-Flow of each block After dividing the frames into blocks,
+        /// we compute optical-flow of each block by computing the average of optical-flows
+        /// of all the pixels constituting a block
+        /// </summary>
+        /// <param name="mag">Magnitude of the block.</param>
+        /// <param name="angle">Angle of the block.</param>
+        /// <param name="grayImg">The frame we are processing.</param>
+        /// <param name="opFlowOfBlocks">'Out' Optical flow of the blocks.</param>
+        /// <param name="centreOfBlocks">'Out' Centers of the block.</param>
+        /// <param name="rows">'Out' Height of the frame.</param>
+        /// <param name="cols">'Out' Width of the frame.</param>
+        /// <param name="noOfRowInBlock">'Out' Number of rows of the mega block.</param>
+        /// <param name="noOfColInBlock">'Out' Number of columns of the mega gird.</param>
+        /// <param name="xBlockSize">'Out' Horizontal size of the block of the block.</param>
+        /// <param name="yBlockSize">'Out' Vertical size of the block of the block.</param>
+        /// <param name="blockSize">'Out' Size of the created block.</param>
+        /// <returns></returns>
         public static void calcOptFlowOfBlocks(Mat mag, Mat angle, Image<Gray, Byte> grayImg,out double[][][] opFlowOfBlocks,
                                                out double[][][] centreOfBlocks, out int rows, out int cols,out int noOfRowInBlock,
                                                out int noOfColInBlock, out int xBlockSize, out int yBlockSize,out int blockSize){
@@ -27,8 +49,8 @@ namespace Real_Time_Abnormal_Event_Detection_And_Tracking_In_Video
             xBlockSize = rows / noOfRowInBlock + 1;
             yBlockSize = cols / noOfColInBlock + 1;
             blockSize = noOfRowInBlock * noOfColInBlock;
-            opFlowOfBlocks = new double[xBlockSize][][]; //yBlockSize 2
-            centreOfBlocks = new double[xBlockSize][][]; //yBlockSize 2
+            opFlowOfBlocks = new double[xBlockSize][][]; 
+            centreOfBlocks = new double[xBlockSize][][]; 
 
             for (int r = 0; r < xBlockSize; r++)
             {
@@ -42,8 +64,6 @@ namespace Real_Time_Abnormal_Event_Detection_And_Tracking_In_Video
                 }
 
             }
-
-
 
                 for (int i = 0; i < mag.Height; i++)
                     for (int j = 0; j < mag.Width; j++)
@@ -96,15 +116,8 @@ namespace Real_Time_Abnormal_Event_Detection_And_Tracking_In_Video
                         }
 
 
-                    }
-
-              
+                    } 
         }
-
-
-
-
-
 
     }
 }

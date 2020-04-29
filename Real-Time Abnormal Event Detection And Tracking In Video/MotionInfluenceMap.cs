@@ -14,6 +14,9 @@ using System.Runtime.InteropServices;
 
 namespace Real_Time_Abnormal_Event_Detection_And_Tracking_In_Video
 {
+    /// <summary>
+    /// Create motion influence map from the processed frames.
+    /// </summary>
     class MotionInfluenceMap
     {
 
@@ -22,9 +25,19 @@ namespace Real_Time_Abnormal_Event_Detection_And_Tracking_In_Video
         int rows, cols, noOfRowInBlock, noOfColInBlock, xBlockSize, yBlockSize, blockSize;
         double[][][] opFlowOfBlocks, centreOfBlocks, motionInfVal;
 
+        /// <summary>
+        /// Generate motion influence map from the processed frames.
+        /// </summary>
+        /// <param name="opFlowOfBlocks">Optical flow values of the processed blocks.</param>
+        /// <param name="blockSize">Size of the block.</param>
+        /// <param name="centreOfBlocks">Centers of the blocks.</param>
+        /// <param name="xBlockSize">Horizontal size of the block of the block.</param>
+        /// <param name="yBlockSize">Vertical size of the block of the block.</param>
+        /// <param name="motionInfVal">'Out' Motion influence map array.</param>
+        /// <returns></returns>
         public void motionInMapGenerator(double[][][] opFlowOfBlocks, int blockSize, double[][][] centreOfBlocks, int xBlockSize, int yBlockSize, out double[][][] motionInfVal)
         {
-            motionInfVal = new double[xBlockSize][][];//yBlockSize, 8
+            motionInfVal = new double[xBlockSize][][];
             
             for (int r = 0; r < xBlockSize; r++)
             {
@@ -63,11 +76,21 @@ namespace Real_Time_Abnormal_Event_Detection_And_Tracking_In_Video
                         }          
 
                  }
-
-
         }
 
 
+        /// <summary>
+        /// get the motion influence map from the processed frames.
+        /// </summary>
+        /// <param name="vid">Path of the video.</param>
+        /// <param name="xBlockSize">Horizontal size of the block of the block.</param>
+        /// <param name="yBlockSize">Vertical size of the block of the block.</param>
+        /// <param name="noOfRowInBlock">'Number of rows of the mega grid.</param>
+        /// <param name="noOfColInBlock">Number of columns of the mega gird.</param>
+        /// <param name="total_frames">Total frames that we will process.</param>
+        /// <param name="clustering">Boolean to determinate wherher to cluster later or not</param>
+        /// <param name="frame_nr">Number of the starting frame.</param>
+        /// <returns>Motion influence map.</returns>
         public List<double[][][]> get_motion_influence_map(String vid, out int xBlockSize, out int yBlockSize, out int noOfRowInBlock, out int noOfColInBlock, out int total_frames, bool clustering, int frame_nr = 0)
         {
             List<double[][][]> ret = new List<double[][][]>();
@@ -109,14 +132,6 @@ namespace Real_Time_Abnormal_Event_Detection_And_Tracking_In_Video
                 cap.SetCaptureProperty(CapProp.PosFrames, frame_nr);
                 frame = cap.QueryFrame();
 
-                //int txt_resize_factor = 2;
-
-                //Size n_size = new Size(frame.Width / Convert.ToInt32(txt_resize_factor),
-                //        frame.Height / Convert.ToInt32(txt_resize_factor));
-
-                //CvInvoke.Resize(frame, frame, n_size);
-                //CvInvoke.Resize(prev_frame, prev_frame, n_size);
-
                 Image<Gray, Byte>  prev_grey_img = new Image<Gray, byte>(frame.Width, frame.Height);
                 Image<Gray, Byte>  curr_grey_img = new Image<Gray, byte>(frame.Width, frame.Height);
 
@@ -136,54 +151,52 @@ namespace Real_Time_Abnormal_Event_Detection_And_Tracking_In_Video
 
                 ret.Add(motionInfVal);
 
-                //prev_grey_img.Dispose();
-                //curr_grey_img.Dispose();
-                //flow_x.Dispose();
-                //flow_y.Dispose();
                 mm++;
-
             }
             return ret;
-
         }
 
 
+        /* 
+         * 
+         * Helper Functions
+         * 
+         */
+        private double getThresholdDistance(double mag, double blockSize){
+            return mag * blockSize;
+        }
 
-
-    private double getThresholdDistance(double mag, double blockSize){
-        return mag * blockSize;
-    }
-    private void getThresholdAngle(double ang,out double pos,out double neg)
-    {
-        double tAngle = Math.PI / 2;
-        pos = ang + tAngle;
-        neg = ang - tAngle;
-    }
+        private void getThresholdAngle(double ang,out double pos,out double neg)
+        {
+            double tAngle = Math.PI / 2;
+            pos = ang + tAngle;
+            neg = ang - tAngle;
+        }
   
-    private void getCentreOfBlock(int index1_i, int index1_j,int index2_i,int index2_j , double[][][] centreOfBlocks,
-        out double x1,out double y1,out double x2,out double y2,out double slope){
-        x1 = centreOfBlocks[index1_i][index1_j][0];
-        y1 = centreOfBlocks[index1_i][index1_j][1];
-        x2 = centreOfBlocks[index2_i][index2_j][0];
-        y2 = centreOfBlocks[index2_i][index2_j][1];
-        slope = (x1 != x2) ? (y2 - y1) / (x2 - x1) : float.PositiveInfinity; 
+        private void getCentreOfBlock(int index1_i, int index1_j,int index2_i,int index2_j , double[][][] centreOfBlocks,
+            out double x1,out double y1,out double x2,out double y2,out double slope){
+            x1 = centreOfBlocks[index1_i][index1_j][0];
+            y1 = centreOfBlocks[index1_i][index1_j][1];
+            x2 = centreOfBlocks[index2_i][index2_j][0];
+            y2 = centreOfBlocks[index2_i][index2_j][1];
+            slope = (x1 != x2) ? (y2 - y1) / (x2 - x1) : float.PositiveInfinity; 
         
-    }
-
-    private double calcEuclideanDist(double x1,double y1,double x2,double y2){
-        return Math.Sqrt((x2 - x1) * (x2 - x1) + (y2 - y1) * (y2 - y1));
-    }
-
-    private double angleBtw2Blocks(double ang1,double ang2){
-        if(ang1 - ang2 < 0){
-            double ang1InDeg = ang1 * (180 / Math.PI);
-            double ang2InDeg = ang2 * (180 / Math.PI);
-            return (360 - (ang1InDeg - ang2InDeg)) * (Math.PI / 180) ;
         }
 
-        return ang1 - ang2 ;
-    }
+        private double calcEuclideanDist(double x1,double y1,double x2,double y2){
+            return Math.Sqrt((x2 - x1) * (x2 - x1) + (y2 - y1) * (y2 - y1));
+        }
+
+        private double angleBtw2Blocks(double ang1,double ang2){
+            if(ang1 - ang2 < 0){
+                double ang1InDeg = ang1 * (180 / Math.PI);
+                double ang2InDeg = ang2 * (180 / Math.PI);
+                return (360 - (ang1InDeg - ang2InDeg)) * (Math.PI / 180) ;
+            }
+
+            return ang1 - ang2 ;
+        }
 
 
-    }
+        }
 }

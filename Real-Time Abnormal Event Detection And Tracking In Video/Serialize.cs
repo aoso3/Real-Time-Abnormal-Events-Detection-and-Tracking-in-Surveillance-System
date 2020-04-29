@@ -9,6 +9,9 @@ using System.Xml.Serialization;
 
 namespace Real_Time_Abnormal_Event_Detection_And_Tracking_In_Video
 {
+    /// <summary>
+    /// Serialize and Deserialize the data.
+    /// </summary>
     class Serialize
     {
 

@@ -9,9 +9,20 @@ using System.Threading.Tasks;
 
 namespace Real_Time_Abnormal_Event_Detection_And_Tracking_In_Video
 {
+    /// <summary>
+    /// This class makes madia manipulation and processing.
+    /// </summary>
     class Media
     {
         public static int num = 0;
+
+        /// <summary>
+        /// Crop the abormal video clips that we detect. 
+        /// </summary>
+        /// <param name="vid">Path of the video on the disk.</param>
+        /// <param name="start_time">The excact second to start the cropping.</param>
+        /// <param name="length">Length of the cropped video.</param>
+        /// <returns></returns>
         public static void Crop_video(String vid,int start_time,int length)
         {
             var inputFile = new MediaFile { Filename = vid};
@@ -23,8 +34,6 @@ namespace Real_Time_Abnormal_Event_Detection_And_Tracking_In_Video
 
                 var options = new ConversionOptions();
 
-                // This example will create a 25 second video, starting from the 
-                // 30th second of the original video.
                 //// First parameter requests the starting frame to cut the media from.
                 //// Second parameter requests how long to cut the video.
                 options.CutMedia(TimeSpan.FromSeconds(start_time), TimeSpan.FromSeconds(length));
@@ -34,6 +43,12 @@ namespace Real_Time_Abnormal_Event_Detection_And_Tracking_In_Video
 
         }
 
+        /// <summary>
+        /// Save thumbnails from the video. 
+        /// </summary>
+        /// <param name="vid">Path of the video on the disk.</param>
+        /// <param name="start_time">The excact second to start the cropping.</param>
+        /// <returns></returns>
         public static void thumbnail(String vid, int start_time)
         {
             var inputFile = new MediaFile { Filename = vid };
@@ -43,7 +58,7 @@ namespace Real_Time_Abnormal_Event_Detection_And_Tracking_In_Video
             {
                 engine.GetMetadata(inputFile);
 
-                // Saves the frame located on the 15th second of the video.
+                // Saves the frame located on the start time of the video.
                 var options = new ConversionOptions { Seek = TimeSpan.FromSeconds(start_time) };
                 engine.GetThumbnail(inputFile, outputFile, options);
             }

@@ -8,10 +8,23 @@ using System.Threading.Tasks;
 
 namespace Real_Time_Abnormal_Event_Detection_And_Tracking_In_Video
 {
+    /// <summary>
+    /// Clustering the normal mega blocks of frames and save the codewords (Centers)
+    /// of the clusters in the disk.
+    /// </summary>
     class Clustering
     {
         int xBlockSize, yBlockSize, noOfRowInBlock, noOfColInBlock;
         int total_frames;
+
+
+        /// <summary>
+        /// Clustering the normal mega blocks of frames using K-means algorithm
+        /// and save the codewords (Centers) of the clusters in the disk.
+        /// </summary>
+        /// <param name="Source_video_path">Path of the video on the disk.</param>
+        /// <param name="Codeword_path">Path of the clusters centers on the disk.</param>
+        /// <returns></returns>
         public void cluster_video(String Source_video_path,String Codeword_path)
         {
 

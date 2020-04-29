@@ -1,4 +1,4 @@
-﻿ using System;
+﻿using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -32,23 +32,18 @@ namespace VideoSurveilance
         private double FrameRate;
         private Mat first_frame;
         private Rectangle temp_rec_trucked;
-        //private Mat last_seen_frame = new Mat();
         private Rectangle last_seen_frame_rec;
         Rectangle to_be_trucked;
-
-
         public int right_margin;
         public int left_margin;
         public int up_margin;
         public int down_margin;
-
         private Camera upCamera;
         private Camera downCamera;
         private Camera rightCamera;
         private Camera leftCamera;
         private bool nextCameraStarted = false;
         Thread trackThread;
-
         public int frameNum = 0;
 
         public Camera(string camera_video_path, PictureBox camera_imageBox)
@@ -69,21 +64,14 @@ namespace VideoSurveilance
             catch (Exception e)
             {
                 Console.WriteLine(e.Message);
-                //return;
             }
 
         }
 
-        public void setTruckedRec(Rectangle TruckedRec) 
+        public void setTruckedRec(Rectangle TruckedRec)
         {
             this.to_be_trucked = TruckedRec;
         }
-
-
-        //public Mat getLasySeenFrame()
-        //{
-        //        //return last_seen_frame==null?first_frame:last_seen_frame;
-        //}
 
         public Rectangle getLasSeenFrameRectangle()
         {
@@ -95,7 +83,7 @@ namespace VideoSurveilance
             this.downCamera = camera;
         }
 
-        public void setMargins(int up_margin,int down_margin,int left_margin,int right_margin)
+        public void setMargins(int up_margin, int down_margin, int left_margin, int right_margin)
         {
             this.up_margin = up_margin;
             this.down_margin = down_margin;
@@ -106,7 +94,8 @@ namespace VideoSurveilance
 
         public void start_tracking()
         {
-            if (to_be_trucked != null) {
+            if (to_be_trucked != null)
+            {
                 ProcessFrame();
 
             }
@@ -127,12 +116,13 @@ namespace VideoSurveilance
                 return;
             }
             Mat frame = _cameraCapture.QueryFrame();
-            var watch = System.Diagnostics.Stopwatch.StartNew();      
+            var watch = System.Diagnostics.Stopwatch.StartNew();
             int camera_speed = (int)(800.0 / FrameRate);
-            while (frame != null) {
+            while (frame != null)
+            {
                 try
                 {
-                    watch = System.Diagnostics.Stopwatch.StartNew();                    
+                    watch = System.Diagnostics.Stopwatch.StartNew();
                     bool ok = tracker.Update(frame.Clone(), out temp_rec_trucked);
                     if (ok)
                     {
@@ -164,78 +154,10 @@ namespace VideoSurveilance
                 {
                     Console.WriteLine(e.Message);
                 }
-               
+
             }
-          
+
         }
-
-        //private void checkTheNextCamera()
-        //{
-        //    Rectangle search_area;
-
-        //    int centerX = last_seen_frame_rec.Location.X + last_seen_frame_rec.Width / 2;
-        //    int centerY = last_seen_frame_rec.Location.Y + last_seen_frame_rec.Height / 2;
-
-        //    //int MainCenterX = last_seen_frame.Width / 2;
-        //    //int MainCenterY = last_seen_frame.Height / 2;
-
-        //    if (centerY > MainCenterY + MainCenterY * 0.5) //down
-        //    {
-        //        nextCameraStarted = true;
-        //        search_area = new Rectangle(
-        //              downCamera.left_margin, // Left
-        //             downCamera.up_margin, // Top
-        //              last_seen_frame_rec.Width, // Width
-        //              last_seen_frame_rec.Height); // Height
-        //        downCamera.setTruckedRec(new Rectangle(search_area.Left,search_area.Top,search_area.Width,search_area.Height));
-        //        downCamera.start_tracking();
-        //    }
-        //    else //Right
-        //    {
-        //        if (centerY < MainCenterY * 0.5) //up
-        //        {
-        //            nextCameraStarted = true;
-        //            search_area = new Rectangle(
-        //                  upCamera.left_margin, // Left
-        //                 upCamera.up_margin, // Top
-        //                  last_seen_frame_rec.Width, // Width
-        //                  last_seen_frame_rec.Height); // Height
-        //            upCamera.setTruckedRec(new Rectangle(search_area.Left, search_area.Top, search_area.Width, search_area.Height));
-        //            upCamera.start_tracking();
-        //        }
-        //        else
-        //        {
-        //            if (centerX < MainCenterX * 0.5) //left
-        //            {
-        //                nextCameraStarted = true;
-        //                search_area = new Rectangle(
-        //                     leftCamera .getLasySeenFrame().Width - leftCamera.right_margin + last_seen_frame_rec.Width, // Left
-        //                     leftCamera.up_margin, // Top
-        //                      last_seen_frame_rec.Width, // Width
-        //                      last_seen_frame_rec.Height); // Height
-        //                leftCamera.setTruckedRec(new Rectangle(search_area.Left, search_area.Top, search_area.Width, search_area.Height));
-        //                leftCamera.start_tracking();
-        //            }
-        //            else
-        //            {
-        //                if (centerX < MainCenterX + MainCenterX * 0.5) //right
-        //                {
-        //                    nextCameraStarted = true;
-        //                    search_area = new Rectangle(
-        //                          rightCamera.left_margin, // Left
-        //                         rightCamera.up_margin, // Top
-        //                          last_seen_frame_rec.Width, // Width
-        //                          last_seen_frame_rec.Height); // Height
-        //                    rightCamera.setTruckedRec(new Rectangle(search_area.Left, search_area.Top, search_area.Width, search_area.Height));
-        //                    rightCamera.start_tracking();
-        //                }
-        //            }
-        //        }
-        //    }
-
-
-        //}
-
 
         public void find_person(Mat Frame_from_another_camera, Rectangle person_rec)
         {
@@ -267,8 +189,6 @@ namespace VideoSurveilance
         int _pressedLocationY;
         int _releasedLocationX;
         int _releasedLocationY;
-
-     
 
         private void imageBox1_MouseDown(object sender, MouseEventArgs e)
         {
@@ -342,7 +262,7 @@ namespace VideoSurveilance
         {
             Rectangle search_area;
 
-             int centerX = template.Location.X + template.Width / 2;
+            int centerX = template.Location.X + template.Width / 2;
             int centerY = template.Location.Y + template.Height / 2;
 
             int MainCenterX = MainFrame.Width / 2;

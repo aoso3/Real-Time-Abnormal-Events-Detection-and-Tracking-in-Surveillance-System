@@ -7,6 +7,10 @@ using System.Threading.Tasks;
 
 namespace Real_Time_Abnormal_Event_Detection_And_Tracking_In_Video
 {
+    /// <summary>
+    /// The main class that uses Motion Influence Map and Mega Blocks to
+    /// detect the abnormal events in the video.
+    /// </summary>
     class AbnormalDetection
     {
         double[][][][] MegaBlock,codewords;
@@ -15,18 +19,20 @@ namespace Real_Time_Abnormal_Event_Detection_And_Tracking_In_Video
         MegaBlocks MB;
         public int xBlockSize, yBlockSize, noOfRowInBlock, noOfColInBlock, n, row, col, cluster_n;
         int total_frames;
-        public static double threshold = 380;//550
-        //public static double threshold = 260; //best
-        //public static double threshold = 0.854147293713963;
-        //double threshold = 4.19471780437277;
-        //double threshold = 7.96910765445956E-50;
+        public static double threshold = 380;
         double[][][] minDistMatrix;
         public int fram_num;
 
-       
 
-
-        public AbnormalDetection(String video_path, String Codeword_path,int frame_number)
+        /// <summary>
+        /// Takes tha data and create motion influance map and mega blocks and process them
+        /// so we can create min distination matrix and create array of centers of normal frames.
+        /// </summary>
+        /// <param name="video_path">Path of the video we want to process.</param>
+        /// <param name="Codeword_path">Path of the centers of normal events in the train videos.</param>
+        /// <param name="frame_number">the number of frame we want to start the processing from.</param>
+        /// <returns></returns>
+        public AbnormalDetection(String video_path, String Codeword_path, int frame_number)
         {
             fram_num = frame_number;
             MIG = new MotionInfluenceMap();
@@ -89,16 +95,16 @@ namespace Real_Time_Abnormal_Event_Detection_And_Tracking_In_Video
                 }
 
             }
-
-            //for (int a = 0; a < row; a++)
-            //    for (int b = 0; b < col; b++)
-            //        for (int q = 0; q < 5; q++)
-            //            for (int w = 0; w < 8; w++)
-            //                Console.WriteLine(codewords[a][b][q][w]);
-                        
-
         }
 
+        /// <summary>
+        /// after extracting the spatio-temporal feature vectors for all mega blocks,
+        /// we construct a minimum distance matrix over the mega blocks in which the
+        /// value of an element is defined by the minimum Euclidean distance between
+        /// a feature vector of the current test frame and the codewords in the corresponding
+        /// mega block.
+        /// </summary>
+        /// <returns></returns>
         public double[][][] Detect()
         {
 
@@ -140,9 +146,6 @@ namespace Real_Time_Abnormal_Event_Detection_And_Tracking_In_Video
             
         }
 
-     
 
-
-    
     }
 }

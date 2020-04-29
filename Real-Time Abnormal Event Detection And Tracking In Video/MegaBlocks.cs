@@ -16,14 +16,26 @@ using System.IO;
 
 namespace Real_Time_Abnormal_Event_Detection_And_Tracking_In_Video
 {
+    /// <summary>
+    /// Create meaga blocks from the processed frames.
+    /// </summary>
     class MegaBlocks
     {
-
+        /// <summary>
+        /// Creating Megablocks Frames are partitioned into non-overlapping mega blocks,
+        /// each of which is a combination of multiple motion influence blocks.
+        /// </summary>
+        /// <param name="motionInfoOfFrames">The resulting motion influence map of the processed frames.</param>
+        /// <param name="xBlockSize">Horizontal size of the block of the mega block.</param>
+        /// <param name="yBlockSize">Vertical size of the block of the mega block.</param>
+        /// <param name="noOfRows">Number of rows of the mega block grid.</param>
+        /// <param name="noOfCols">Number of columns of the mega block gird.</param>
+        /// <param name="total_frames">Total frames that we will process.</param>
+        /// <returns>Mega blocks array of the frames.</returns>
         public double[][][][] createMegaBlocks(List<double[][][]> motionInfoOfFrames, int xBlockSize, int yBlockSize, int noOfRows, int noOfCols, int total_frames)
         {
             int n = 2;
             int frameCounter = 0;
-            //double[][][][] megaBlockMotInfVal = new double[xBlockSize / n + 1][yBlockSize / n + 1][motionInfoOfFrames.Count][8];
             double[][][][] megaBlockMotInfVal = new double[xBlockSize / n + 1][][][];
 
             for (int r = 0; r < xBlockSize / n + 1; r++)
@@ -37,25 +49,17 @@ namespace Real_Time_Abnormal_Event_Detection_And_Tracking_In_Video
                         megaBlockMotInfVal[r][rr][rrr] = new double[8];
 
                 }
-
             }
-
 
             foreach (double[][][] frame in motionInfoOfFrames)
             {
                 for (int i = 0; i < xBlockSize; i++)
                     for (int j = 0; j < yBlockSize; j++)
                     {
-                        //double[] left = megaBlockMotInfVal[(int)i / n][(int)j / n][frameCounter];
-                        //var products = left.Zip(right, (m, n) => m * n);
-                        //double[] sum = new double[8];
                         for (int k = 0; k < 8; k++)
                         {
                             megaBlockMotInfVal[(int)i / n][(int)j / n][frameCounter][k] += frame[i][j][k];
-
-                            //Console.WriteLine("K = {0} || {1}", k, megaBlockMotInfVal[(int)i / n][(int)j / n][frameCounter][k]);
                         }
-                        //megaBlockMotInfVal[(int)i / n, (int)j / n, frameCounter] = sum;                                            
                     }
 
                 frameCounter++;
@@ -64,6 +68,15 @@ namespace Real_Time_Abnormal_Event_Detection_And_Tracking_In_Video
 
         }
 
+        /// <summary>
+        /// Applying k-means clustering algorithm on the resulting mega blocks and return
+        /// the centers of the normal clusters.
+        /// </summary>
+        /// <param name="megaBlockMotInfVal">The resulting mega blocks array of the frames of the processed frames.</param>
+        /// <param name="xBlockSize">Horizontal size of the block of the mega block.</param>
+        /// <param name="yBlockSize">Vertical size of the block of the mega block.</param>
+        /// <param name="total_frames">Total frames that we will process.</param>
+        /// <returns>Centers of the normal clusters.</returns>
         public double[][][][] kmeans(double[][][][] megaBlockMotInfVal, int xBlockSize, int yBlockSize, int total_frames)
         {
             int count = 0;
@@ -96,17 +109,8 @@ namespace Real_Time_Abnormal_Event_Detection_And_Tracking_In_Video
                     double[][] observations = megaBlockMotInfVal[i][j];
                     KMeans kmeans = new KMeans(k: 5);
                     var clusters = kmeans.Learn(observations);
-                    
-                   
+   
                     centriods = clusters.Centroids;
-
-                    //count = 0;
-                    //for (int q = 0; q < 5; q++)
-                    //{
-                    //    //Console.WriteLine("Cluster: {0}", count++);
-                    //    //for (int w = 0; w < 8; w++)
-                    //    Console.WriteLine(centriods[q][0]);
-                    //}
 
                     codewords[i][j] = centriods;
                          
