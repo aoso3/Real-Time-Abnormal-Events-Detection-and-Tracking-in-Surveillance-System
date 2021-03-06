@@ -81,6 +81,12 @@ of usual activities that can occur in the respective area.
 ![Alt tag](Screenshots/op.png?raw=true "optical flow")
 <br>
 3- Classification
+<br>
+<h4>This project is based on the following papers:<?h4>
+https://ieeexplore.ieee.org/document/7024902?section=abstract
+https://www.researchgate.net/publication/221362278_Anomaly_Detection_in_Crowded_Scenes
+https://www.researchgate.net/publication/220278263_Motion-based_unusual_event_detection_in_human_crowds
+
 
   
 
