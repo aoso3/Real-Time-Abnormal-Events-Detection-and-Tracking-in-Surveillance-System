@@ -132,8 +132,6 @@ namespace real_time_abnormal_event_detection_and_tracking_in_video
                     CvInvoke.CalcOpticalFlowPyrLK(prev_grey_img, curr_grey_img, features, new Size(9, 9), 3, new MCvTermCriteria(20, 0.05),
                        out shiftedFeatures, out status, out trackErrors);
 
-
-
                     //Image<Gray, Byte> displayImage = cap.QueryFrame().ToImage<Gray, Byte>();
                     //for (int i = 0; i < features.Length; i++)
                     //    displayImage.Draw(new LineSegment2DF(features[i], shiftedFeatures[i]), new Gray(), 2);
@@ -149,7 +147,7 @@ namespace real_time_abnormal_event_detection_and_tracking_in_video
 
                     foreach (PointF p in shiftedFeatures)
                     {
-                        mean_X += (int) p.X;
+                        mean_X += (int)p.X;
                         mean_Y += (int)p.Y;
                     }
 
@@ -158,7 +156,7 @@ namespace real_time_abnormal_event_detection_and_tracking_in_video
 
                     F_L.Add(mean_X);
                     F_L.Add(mean_Y);
-                    
+
 
                     //double[] inner = new double[] { mean_X, mean_Y };
                     //featuers_list[mm] = inner;
@@ -222,7 +220,7 @@ namespace real_time_abnormal_event_detection_and_tracking_in_video
                 Console.WriteLine(except.Message);
             }
 
-            for (int r = current_frame; r < current_frame + 2;r++ )
+            for (int r = current_frame; r < current_frame + 2; r++)
             {
 
                 try
@@ -276,12 +274,9 @@ namespace real_time_abnormal_event_detection_and_tracking_in_video
                     CvInvoke.CalcOpticalFlowPyrLK(prev_grey_img, curr_grey_img, features, new Size(9, 9), 3, new MCvTermCriteria(20, 0.05),
                        out shiftedFeatures, out status, out trackErrors);
 
-
-
                     //Image<Gray, Byte> displayImage = cap.QueryFrame().ToImage<Gray, Byte>();
                     //for (int i = 0; i < features.Length; i++)
                     //    displayImage.Draw(new LineSegment2DF(features[i], shiftedFeatures[i]), new Gray(), 2);
-
 
                     for (int i = 0; i < features.Length; i++)
                     {
@@ -461,7 +456,7 @@ namespace real_time_abnormal_event_detection_and_tracking_in_video
 
         //}
 
- 
+
 
     }
 }

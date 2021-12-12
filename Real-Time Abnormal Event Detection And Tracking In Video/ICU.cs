@@ -93,7 +93,7 @@ namespace Real_Time_Abnormal_Event_Detection_And_Tracking_In_Video
         {
 
         }
-       
+
 
         private void Video1_Proccess1()
         {
@@ -203,7 +203,7 @@ namespace Real_Time_Abnormal_Event_Detection_And_Tracking_In_Video
                         //pictureBox3.Image = Properties.Resources._checked;
                         warning = false;
                     }
-            
+
                 }
                 catch (Exception e)
                 {
@@ -297,11 +297,6 @@ namespace Real_Time_Abnormal_Event_Detection_And_Tracking_In_Video
             }
 
         }
-
-
-
-
-
 
         private async void play_video1()
         {

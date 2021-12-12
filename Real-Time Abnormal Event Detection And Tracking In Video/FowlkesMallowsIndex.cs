@@ -42,7 +42,6 @@ namespace Real_Time_Abnormal_Event_Detection_And_Tracking_In_Video
                     target.Add(Convert.ToInt16(line));
             }
 
-
             for (int i = 0; i < target.Count; i++)
             {
                 if (pridect[i] == target[i])

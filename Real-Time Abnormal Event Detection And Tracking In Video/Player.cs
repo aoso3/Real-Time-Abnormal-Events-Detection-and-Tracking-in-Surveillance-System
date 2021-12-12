@@ -37,20 +37,18 @@ namespace Real_Time_Abnormal_Event_Detection_And_Tracking_In_Video
         Mat current_frame1;
         int vid1_frame = 0;
         public static bool play = true;
-        
+
 
         public Player()
         {
             InitializeComponent();
-           
+
         }
 
         private void Main_Load(object sender, EventArgs e)
         {
 
         }
-
-
 
         private void radButton4_Click(object sender, EventArgs e)
         {
@@ -61,12 +59,9 @@ namespace Real_Time_Abnormal_Event_Detection_And_Tracking_In_Video
 
         }
 
-
-
-
-        public async void start(String video) 
+        public async void start(String video)
         {
-          
+
             try
             {
 
@@ -106,7 +101,7 @@ namespace Real_Time_Abnormal_Event_Detection_And_Tracking_In_Video
             {
                 MessageBox.Show(excpt.Message);
             }
-          
+
         }
 
         private void radButton5_Click(object sender, EventArgs e)
@@ -117,8 +112,6 @@ namespace Real_Time_Abnormal_Event_Detection_And_Tracking_In_Video
             Owner.Enabled = true;
             this.Close();
         }
-
-
 
     }
 }

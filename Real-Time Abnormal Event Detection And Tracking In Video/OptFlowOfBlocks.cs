@@ -36,10 +36,11 @@ namespace Real_Time_Abnormal_Event_Detection_And_Tracking_In_Video
         /// <param name="yBlockSize">'Out' Vertical size of the block of the block.</param>
         /// <param name="blockSize">'Out' Size of the created block.</param>
         /// <returns></returns>
-        public static void calcOptFlowOfBlocks(Mat mag, Mat angle, Image<Gray, Byte> grayImg,out double[][][] opFlowOfBlocks,
-                                               out double[][][] centreOfBlocks, out int rows, out int cols,out int noOfRowInBlock,
-                                               out int noOfColInBlock, out int xBlockSize, out int yBlockSize,out int blockSize){
-            
+        public static void calcOptFlowOfBlocks(Mat mag, Mat angle, Image<Gray, Byte> grayImg, out double[][][] opFlowOfBlocks,
+                                               out double[][][] centreOfBlocks, out int rows, out int cols, out int noOfRowInBlock,
+                                               out int noOfColInBlock, out int xBlockSize, out int yBlockSize, out int blockSize)
+        {
+
             double val = 0;
             double deg_threshold = 337.5;
             rows = grayImg.Height;
@@ -49,8 +50,8 @@ namespace Real_Time_Abnormal_Event_Detection_And_Tracking_In_Video
             xBlockSize = rows / noOfRowInBlock + 1;
             yBlockSize = cols / noOfColInBlock + 1;
             blockSize = noOfRowInBlock * noOfColInBlock;
-            opFlowOfBlocks = new double[xBlockSize][][]; 
-            centreOfBlocks = new double[xBlockSize][][]; 
+            opFlowOfBlocks = new double[xBlockSize][][];
+            centreOfBlocks = new double[xBlockSize][][];
 
             for (int r = 0; r < xBlockSize; r++)
             {
@@ -65,16 +66,16 @@ namespace Real_Time_Abnormal_Event_Detection_And_Tracking_In_Video
 
             }
 
-                for (int i = 0; i < mag.Height; i++)
-                    for (int j = 0; j < mag.Width; j++)
-                    {
-                        double[] mag_value = new double[1];
-                        Marshal.Copy(mag.DataPointer + (i * mag.Cols + j) * mag.ElementSize, mag_value, 0, 1);
-                        opFlowOfBlocks[i / noOfRowInBlock][j / noOfColInBlock][0] += mag_value[0];
-                        double[] angle_value = new double[1];
-                        Marshal.Copy(angle.DataPointer + (i * angle.Cols + j) * angle.ElementSize, angle_value, 0, 1);
-                        opFlowOfBlocks[i / noOfRowInBlock][j / noOfColInBlock][1] += angle_value[0];
-                    }
+            for (int i = 0; i < mag.Height; i++)
+                for (int j = 0; j < mag.Width; j++)
+                {
+                    double[] mag_value = new double[1];
+                    Marshal.Copy(mag.DataPointer + (i * mag.Cols + j) * mag.ElementSize, mag_value, 0, 1);
+                    opFlowOfBlocks[i / noOfRowInBlock][j / noOfColInBlock][0] += mag_value[0];
+                    double[] angle_value = new double[1];
+                    Marshal.Copy(angle.DataPointer + (i * angle.Cols + j) * angle.ElementSize, angle_value, 0, 1);
+                    opFlowOfBlocks[i / noOfRowInBlock][j / noOfColInBlock][1] += angle_value[0];
+                }
 
             for (int i = 0; i < xBlockSize; i++)
                 for (int j = 0; j < yBlockSize; j++)
@@ -84,7 +85,7 @@ namespace Real_Time_Abnormal_Event_Detection_And_Tracking_In_Video
                         val = opFlowOfBlocks[i][j][k];
 
                         double opt = 0;
-                        if( k == 1 )
+                        if (k == 1)
                         {
                             double angInDeg = val * (180 / Math.PI);
                             if (angInDeg > deg_threshold)
@@ -96,7 +97,7 @@ namespace Real_Time_Abnormal_Event_Detection_And_Tracking_In_Video
                                 double q1 = (int)(angInDeg - a1);
                                 double a2 = (q + 2) * 22.5;
                                 double q2 = (a2 - angInDeg);
-                                
+
                                 if (q1.CompareTo(q2) == -1)
                                     opt = Math.Round(a1 / 45);
                                 else
@@ -116,7 +117,7 @@ namespace Real_Time_Abnormal_Event_Detection_And_Tracking_In_Video
                         }
 
 
-                    } 
+                    }
         }
 
     }

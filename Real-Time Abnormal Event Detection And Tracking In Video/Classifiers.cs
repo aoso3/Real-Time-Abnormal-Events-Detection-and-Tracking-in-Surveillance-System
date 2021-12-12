@@ -77,7 +77,7 @@ namespace Real_Time_Abnormal_Event_Detection_And_Tracking_In_Video
         {
             var teacher = new RandomForestLearning()
             {
-                NumberOfTrees = NumOfTrees, 
+                NumberOfTrees = NumOfTrees,
             };
 
             var forest = teacher.Learn(train_data, train_label);
@@ -132,14 +132,14 @@ namespace Real_Time_Abnormal_Event_Detection_And_Tracking_In_Video
 
             var learner = new IterativeReweightedLeastSquares<LogisticRegression>()
             {
-                Tolerance = 1e-4,  
-                MaxIterations = 100,  
+                Tolerance = 1e-4,
+                MaxIterations = 100,
                 Regularization = 0
             };
 
             LogisticRegression regression = learner.Learn(train_data, train_label);
 
-            double ageOdds = regression.GetOddsRatio(0); 
+            double ageOdds = regression.GetOddsRatio(0);
             double smokeOdds = regression.GetOddsRatio(1);
 
             double[] scores = regression.Probability(test_data);
@@ -182,7 +182,7 @@ namespace Real_Time_Abnormal_Event_Detection_And_Tracking_In_Video
                 bool[] prediction = svm.Decide(test_data);
 
                 var cm = GeneralConfusionMatrix.Estimate(svm, test_data, test_label);
-        
+
 
                 double error = cm.Error;
 
@@ -282,7 +282,7 @@ namespace Real_Time_Abnormal_Event_Detection_And_Tracking_In_Video
             HiddenMarkovModel hmm = teacher.Learn(sequences);
             hmm.Save(Path.Combine(Classifier_Path, Classifier_Name));
 
-    
+
             //for (int i = 0; i < sequences.Length; i++)
             //{
             //    double fl1 = hmm.LogLikelihood(sequences[i]);     
@@ -290,7 +290,7 @@ namespace Real_Time_Abnormal_Event_Detection_And_Tracking_In_Video
 
             //}
 
-        
+
         }
 
 

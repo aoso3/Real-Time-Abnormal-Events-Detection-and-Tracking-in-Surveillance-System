@@ -109,11 +109,11 @@ namespace Real_Time_Abnormal_Event_Detection_And_Tracking_In_Video
                     double[][] observations = megaBlockMotInfVal[i][j];
                     KMeans kmeans = new KMeans(k: 5);
                     var clusters = kmeans.Learn(observations);
-   
+
                     centriods = clusters.Centroids;
 
                     codewords[i][j] = centriods;
-                         
+
                 }
 
             return codewords;

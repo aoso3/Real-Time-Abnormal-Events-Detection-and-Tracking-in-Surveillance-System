@@ -13,7 +13,7 @@ namespace Real_Time_Abnormal_Event_Detection_And_Tracking_In_Video
     /// </summary>
     class AbnormalDetection
     {
-        double[][][][] MegaBlock,codewords;
+        double[][][][] MegaBlock, codewords;
         List<double[][][]> MotionInfOfFrames;
         MotionInfluenceMap MIG;
         MegaBlocks MB;
@@ -45,7 +45,7 @@ namespace Real_Time_Abnormal_Event_Detection_And_Tracking_In_Video
             cluster_n = 5;
             int i = 0, j = 0, k = 0;
             codewords = new double[row][][][];
- 
+
 
             for (int r = 0; r < row; r++)
             {
@@ -76,22 +76,22 @@ namespace Real_Time_Abnormal_Event_Detection_And_Tracking_In_Video
                 while ((line = reader.ReadLine()) != null)
                 {
 
-                    double[] arr = Array.ConvertAll(line.Split(' '), Double.Parse) ;
+                    double[] arr = Array.ConvertAll(line.Split(' '), Double.Parse);
                     codewords[i][j][k] = arr;
                     k++;
                     if (k == cluster_n)
                     {
                         k = 0;
                         j++;
-                        if (j == col) 
+                        if (j == col)
                         {
                             j = 0;
-                            if(i<row-1)
-                            i++;
+                            if (i < row - 1)
+                                i++;
                         }
                     }
 
-                    
+
                 }
 
             }
@@ -113,11 +113,11 @@ namespace Real_Time_Abnormal_Event_Detection_And_Tracking_In_Video
 
                 for (int j = 0; j < col; j++)
                 {
-                   List<double> eucledianDist = new List<double>();
+                    List<double> eucledianDist = new List<double>();
 
                     for (int k = 0; k < total_frames; k++)
                     {
-                        
+
                         for (int q = 0; q < cluster_n; q++)
                         {
                             double temp = 0;
@@ -139,11 +139,11 @@ namespace Real_Time_Abnormal_Event_Detection_And_Tracking_In_Video
 
                 }
 
-             
+
             }
 
             return minDistMatrix;
-            
+
         }
 
 

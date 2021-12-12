@@ -25,11 +25,11 @@ namespace Real_Time_Abnormal_Event_Detection_And_Tracking_In_Video
         /// <param name="Source_video_path">Path of the video on the disk.</param>
         /// <param name="Codeword_path">Path of the clusters centers on the disk.</param>
         /// <returns></returns>
-        public void cluster_video(String Source_video_path,String Codeword_path)
+        public void cluster_video(String Source_video_path, String Codeword_path)
         {
 
             MotionInfluenceMap MIG = new MotionInfluenceMap();
-            List<double[][][]> MotionInfOfFrames = MIG.get_motion_influence_map(Source_video_path, out xBlockSize, out yBlockSize, out noOfRowInBlock, out noOfColInBlock, out total_frames,true);
+            List<double[][][]> MotionInfOfFrames = MIG.get_motion_influence_map(Source_video_path, out xBlockSize, out yBlockSize, out noOfRowInBlock, out noOfColInBlock, out total_frames, true);
             MegaBlocks MB = new MegaBlocks();
             double[][][][] MegaBlock = MB.createMegaBlocks(MotionInfOfFrames, xBlockSize, yBlockSize, noOfRowInBlock, noOfColInBlock, (int)total_frames);
             double[][][][] codewords = MB.kmeans(MegaBlock, xBlockSize, yBlockSize, (int)total_frames);
@@ -44,7 +44,7 @@ namespace Real_Time_Abnormal_Event_Detection_And_Tracking_In_Video
                         {
                             for (int w = 0; w < 8; w++)
                             {
-                                if (w != 7) 
+                                if (w != 7)
                                     st.Write(codewords[i][j][q][w] + " ");
                                 else
                                     st.Write(codewords[i][j][q][w]);
@@ -52,7 +52,7 @@ namespace Real_Time_Abnormal_Event_Detection_And_Tracking_In_Video
                             }
                             st.WriteLine();
                         }
-                    
+
         }
 
 

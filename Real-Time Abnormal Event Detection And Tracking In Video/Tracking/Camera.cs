@@ -176,7 +176,7 @@ namespace VideoSurveilance
             //tracker.Init(_cameraCapture.QueryFrame(), person);
 
             //temp_rec_trucked = to_be_trucked;
-            Thread thread = new Thread(delegate()
+            Thread thread = new Thread(delegate ()
             {
                 ProcessFrame();
             });

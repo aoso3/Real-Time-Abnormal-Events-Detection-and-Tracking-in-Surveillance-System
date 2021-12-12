@@ -44,7 +44,7 @@ namespace VideoSurveilance
 
                 // Bruteforce, slower but more accurate
                 // You can use KDTree for faster matching with slight loss in accuracy
-                using (Emgu.CV.Flann.LinearIndexParams ip = new Emgu.CV.Flann.LinearIndexParams()) 
+                using (Emgu.CV.Flann.LinearIndexParams ip = new Emgu.CV.Flann.LinearIndexParams())
                 using (Emgu.CV.Flann.SearchParams sp = new SearchParams())
                 using (DescriptorMatcher matcher = new FlannBasedMatcher(ip, sp))
                 {
@@ -69,7 +69,7 @@ namespace VideoSurveilance
 
                             // Calculate score based on matches size
                             // ---------------------------------------------->
-                            
+
                             for (int i = 0; i < matches.Size; i++)
                             {
                                 //if (mask.GetData(i)[0] == 0) continue;
@@ -95,7 +95,7 @@ namespace VideoSurveilance
         /// <returns>The model image and observed image, the matched features and homography projection.</returns>
         public static Rectangle Draw(Mat modelImage, Mat observedImages, out long matchTime)
         {
-            List<Mat>humans = new List<Mat>();
+            List<Mat> humans = new List<Mat>();
             matchTime = 0;
             Image<Bgr, Byte> image = modelImage.ToImage<Bgr, Byte>();
             MCvObjectDetection[] rects;
@@ -129,40 +129,40 @@ namespace VideoSurveilance
                     FindMatch(modelImage, observedImage, out matchTime, out modelKeyPoints, out observedKeyPoints, matches,
                        out mask, out homography, out score);
 
-                    
-                        //Draw the matched keypoints
-                        Features2DToolbox.DrawMatches(modelImage, modelKeyPoints, observedImage, observedKeyPoints,
-                           matches, result, new MCvScalar(255, 255, 255), new MCvScalar(255, 255, 255), mask);
 
-                        #region draw the projected region on the image
-                        if (homography != null)
-                        {
-                            //draw a rectangle along the projected model
-                            Rectangle rect = new Rectangle(Point.Empty, modelImage.Size);
-                            PointF[] pts = new PointF[]
-                                {
+                    //Draw the matched keypoints
+                    Features2DToolbox.DrawMatches(modelImage, modelKeyPoints, observedImage, observedKeyPoints,
+                       matches, result, new MCvScalar(255, 255, 255), new MCvScalar(255, 255, 255), mask);
+
+                    #region draw the projected region on the image
+                    if (homography != null)
+                    {
+                        //draw a rectangle along the projected model
+                        Rectangle rect = new Rectangle(Point.Empty, modelImage.Size);
+                        PointF[] pts = new PointF[]
+                            {
                                 new PointF(rect.Left, rect.Bottom),
                                 new PointF(rect.Right, rect.Bottom),
                                 new PointF(rect.Right, rect.Top),
                                 new PointF(rect.Left, rect.Top)
-                                };
-                            pts = CvInvoke.PerspectiveTransform(pts, homography);
+                            };
+                        pts = CvInvoke.PerspectiveTransform(pts, homography);
 
-                            Point[] points = Array.ConvertAll<PointF, Point>(pts, Point.Round);
-                            using (VectorOfPoint vp = new VectorOfPoint(points))
-                            {
-                                CvInvoke.Polylines(result, vp, true, new MCvScalar(255, 0, 0, 255), 5);
-                            }
-                         }
-                        
-                        #endregion 
-                        if (pre_score < score)
+                        Point[] points = Array.ConvertAll<PointF, Point>(pts, Point.Round);
+                        using (VectorOfPoint vp = new VectorOfPoint(points))
                         {
-                            pre_score = score;
-                            human = rects[i].Rect;
+                            CvInvoke.Polylines(result, vp, true, new MCvScalar(255, 0, 0, 255), 5);
                         }
+                    }
+
+                    #endregion
+                    if (pre_score < score)
+                    {
+                        pre_score = score;
+                        human = rects[i].Rect;
+                    }
                 }
-                
+
             }
             return human;
 
